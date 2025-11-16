@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Bubblez";
+  src: url("/fonts/ofont.ru_Bubblez Graffiti.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SouthGhetto";
+  src: url("/fonts/ofont.ru_SouthGhetto.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+}
+
+.main-block {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+* {
+  font-family: "SouthGhetto";
+}

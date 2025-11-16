@@ -1,0 +1,78 @@
+@keyframes splashes_animation {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes appear_animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes undertile_animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.product-information-block {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: rgba(0, 0, 0, 0.836);
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  // background-image: url("/images/yoshta_background.png");
+  // background-size: cover;
+
+  &__image-block {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    animation: appear_animation 0.8s ease-in;
+
+    &__image {
+      z-index: 2;
+      width: 600px;
+    }
+
+    &__splashes {
+      position: absolute;
+      z-index: 1;
+      animation: splashes_animation 4s ease-in-out infinite forwards;
+    }
+  }
+
+  &__undertile {
+    align-self: center;
+    font-family: "SouthGhetto";
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    width: 30%;
+    color: white;
+    opacity: 0;
+    animation: undertile_animation 0.8s forwards;
+    animation-delay: 0.5s;
+  }
+}
