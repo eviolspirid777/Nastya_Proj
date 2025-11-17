@@ -75,7 +75,7 @@ h1 {
     &:after {
       box-shadow: 0 0 0 4px fade(#4298c3, 100%);
       left: (50px + 4px + (11px * 0.35)) * -1;
-      background: lighten(#252827, 5%);
+      background: #252827;
       border-radius: 50%;
       height: 11px;
       width: 11px;

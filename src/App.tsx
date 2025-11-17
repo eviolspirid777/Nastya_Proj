@@ -1,5 +1,6 @@
 import { About } from "./Components/About/About";
 import { Benefits } from "./Components/Benefits/Benefits";
+import { Contacts } from "./Components/Contacts/Contacts";
 import { Header } from "./Components/Header/Header";
 import { Product } from "./Components/Product/Product";
 import { Sponsors } from "./Components/Sponsors/Sponsors";
@@ -14,6 +15,7 @@ export const App = () => {
       <Benefits />
       <Technology />
       <Sponsors />
+      <Contacts />
     </div>
   );
 };
