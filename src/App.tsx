@@ -22,8 +22,8 @@ export const App = () => {
       <Product changeHeaderColor={setNewColor} />
       <About changeHeaderColor={setNewColor} />
       <Benefits changeHeaderColor={setNewColor} />
-      <Technology changeHeaderColor={setHeaderColor} />
-      <Diplom changeHeaderColor={setHeaderColor} />
+      <Technology changeHeaderColor={setNewColor} />
+      <Diplom changeHeaderColor={setNewColor} />
       <Sponsors />
       <Contacts />
       <Footer />
