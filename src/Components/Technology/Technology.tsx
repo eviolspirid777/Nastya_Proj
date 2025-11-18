@@ -1,9 +1,23 @@
+import { useInView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
+import { memo, useEffect, type FC } from "react";
 
-export const Technology = () => {
+export const Technology: FC<{
+  changeHeaderColor: (color: "black" | "white") => void;
+}> = memo(({ changeHeaderColor }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      changeHeaderColor("black");
+    }
+  }, [inView]);
+
   return (
-    <div id="content">
-      <h1>Timeline Concept</h1>
+    <div ref={ref} id="history">
+      <h1 className={styles["header"]}>История</h1>
 
       <ul className={styles["timeline"]}>
         <li className={styles["event"]} data-date="2024 год">
@@ -52,4 +66,4 @@ export const Technology = () => {
       </ul>
     </div>
   );
-};
+});

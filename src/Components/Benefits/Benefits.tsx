@@ -1,8 +1,22 @@
+import { memo, useEffect, useMemo, type FC } from "react";
 import Balatro from "../../shared/components/BalatroBackground/BalatroBackground";
 import BlurText from "../../shared/components/BlurText/BlurText";
 import styles from "./Benefits.module.scss";
+import { useInView } from "react-intersection-observer";
 
-export const Benefits = () => {
+export const Benefits: FC<{
+  changeHeaderColor: (color: "white" | "black") => void;
+}> = memo(({ changeHeaderColor }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      changeHeaderColor("white");
+    }
+  }, [inView]);
+
   const renderBlurText = (textContent: string) => {
     return (
       <BlurText
@@ -14,8 +28,8 @@ export const Benefits = () => {
     );
   };
 
-  return (
-    <div className={styles["benefits-wrapper"]}>
+  const memoizedBalatro = useMemo(
+    () => (
       <Balatro
         isRotate={false}
         mouseInteraction={true}
@@ -24,6 +38,13 @@ export const Benefits = () => {
         color2="#6e6868"
         color3="black"
       />
+    ),
+    []
+  );
+
+  return (
+    <div ref={ref} id="benefits" className={styles["benefits-wrapper"]}>
+      {memoizedBalatro}
       <div className={styles["benefits-block"]}>
         <h3>Преимущества</h3>
         <div className={styles["benefits-block__data"]}>
@@ -55,4 +76,4 @@ export const Benefits = () => {
       </div>
     </div>
   );
-};
+});

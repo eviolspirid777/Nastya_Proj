@@ -1,8 +1,22 @@
+import { memo, useEffect, type FC } from "react";
 import styles from "./styles.module.scss";
+import { useInView } from "react-intersection-observer";
 
-export const Product = () => {
+export const Product: FC<{
+  changeHeaderColor: (color: string) => void;
+}> = memo(({ changeHeaderColor }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      changeHeaderColor("white");
+    }
+  }, [inView]);
+
   return (
-    <div className={styles["product-information-block"]}>
+    <div ref={ref} className={styles["product-information-block"]}>
       <div className={styles["product-information-block__image-block"]}>
         <img
           className={styles["product-information-block__image-block__image"]}
@@ -19,4 +33,4 @@ export const Product = () => {
       </strong>
     </div>
   );
-};
+});

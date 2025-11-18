@@ -1,0 +1,42 @@
+.footer-block {
+  margin-top: 10%;
+  padding: 1% 0%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.01fr 1fr;
+  background-color: #2a2a2a;
+  color: white;
+
+  &__organization-info {
+    padding-left: 7%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+
+    & > * {
+      cursor: pointer;
+    }
+  }
+
+  &__developer-info {
+    width: 96%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: flex-end;
+    align-items: flex-end;
+    gap: 5px;
+  }
+}

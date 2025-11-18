@@ -1,8 +1,10 @@
+import { MdMail, MdPhone } from "react-icons/md";
 import styles from "./styles.module.scss";
+import { memo } from "react";
 
-export const Contacts = () => {
+export const Contacts = memo(() => {
   return (
-    <div className={styles["contacts-block"]}>
+    <div id="contacts" className={styles["contacts-block"]}>
       <h2>Наши контакты</h2>
       <strong>
         Напишите нам или заполните свои данные и мы свяжемся с вами
@@ -10,27 +12,36 @@ export const Contacts = () => {
       <div className={styles["contacts-block__content"]}>
         <div className={styles["contacts-block__content__card"]}>
           <span className={styles["contacts-block__content__card__telephone"]}>
-            +7 968 268 34 58
+            +7 988 106 00 43
           </span>
           <span className={styles["contacts-block__content__card__email"]}>
-            YLYA950705@yandex.ru
+            Lyahovaanastasya@yandex.ru
           </span>
           <span className={styles["contacts-block__content__card__address"]}>
-            Юридический адрес: Россия, г. Ставрополь, ул. 50 лет ВЛКСМ, д.111,
-            кв. 45
+            Юридический адрес: Россия, Ставропольский край, г. Ставрополь,
+            ул.Пирогова, д. 15/2
           </span>
           <div className={styles["contacts-block__content__card__contacts"]}>
-            <i />
-            <i />
+            <a href="tel:+7-988-106-00-43">
+              <MdPhone size={25} />
+            </a>
+            <a href="mailto:Lyahovaanastasya@yandex.ru">
+              <MdMail size={25} />
+            </a>
           </div>
         </div>
         <div className={styles["contacts-block__content__form"]}>
           <input type="text" placeholder="Ваш email" />
           <input type="text" placeholder="Ваше Ф.И.О." />
           <input type="text" placeholder="Ваш телефон" />
-          <button>Отправить</button>
+          <a className={styles["btn-epic"]}>
+            <div>
+              <span>Отправить</span>
+              <span>Отправить</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   );
-};
+});

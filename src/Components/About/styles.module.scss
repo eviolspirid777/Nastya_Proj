@@ -1,21 +1,37 @@
 .about-block {
   height: 100vh;
   width: 100%;
+  // display: grid;
+  // grid-template-rows: auto 1fr;
   display: flex;
   flex-flow: column nowrap;
-  gap: 20px;
+  gap: 100px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 10%;
   background-image: url("/images/yoshta_background.png");
   background-size: cover;
   background-attachment: fixed;
+  color: white;
 
-  & span {
-    width: 50%;
-    align-self: center;
-    font-family: "SouthGhetto";
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: white;
+  & h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__information {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    & span {
+      width: 50%;
+      align-self: center;
+      // font-family: "SouthGhetto";
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
   }
 }

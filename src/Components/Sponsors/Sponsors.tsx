@@ -1,6 +1,7 @@
+import { memo } from "react";
 import styles from "./styles.module.scss";
 
-export const Sponsors = () => {
+export const Sponsors = memo(() => {
   return (
     <div className={styles["sponsors-block"]}>
       <h3>Нас поддерживают</h3>
@@ -32,4 +33,4 @@ export const Sponsors = () => {
       </div>
     </div>
   );
-};
+});
