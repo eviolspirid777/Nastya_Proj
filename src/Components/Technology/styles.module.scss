@@ -90,3 +90,96 @@ h1 {
     }
   }
 }
+
+@media (max-width: 430px) {
+  strong {
+    font-weight: 600;
+  }
+
+  h1 {
+    letter-spacing: 1.5px;
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+
+  #content {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .header {
+    margin-top: 40px;
+    color: black;
+    text-align: center;
+  }
+
+  /* Timeline */
+
+  .timeline {
+    border-left: 4px solid $secondary-color;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: fade(white, 3%);
+    color: fade(white, 80%);
+    margin: 50px auto;
+    letter-spacing: 0.5px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 0.68rem;
+    list-style: none;
+    text-align: left;
+    font-weight: 100;
+    max-width: 50%;
+
+    h1,
+    h2,
+    h3 {
+      letter-spacing: 1.5px;
+      font-weight: 100;
+      font-size: 0.8rem;
+    }
+
+    .event {
+      border-bottom: 1px dashed fade(white, 10%);
+      padding-bottom: (50px * 0.5);
+      margin-bottom: 50px;
+      position: relative;
+
+      &:last-of-type {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+      }
+
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        top: 0;
+      }
+
+      &:before {
+        left: -17vw;
+        top: -3vh;
+        color: #882ba2;
+        content: attr(data-date);
+        text-align: right;
+        font-weight: 100;
+        font-size: 0.7rem;
+        min-width: 120px;
+      }
+
+      &:after {
+        box-shadow: 0 0 0 4px fade(#4298c3, 100%);
+        left: (50px + 4px + (11px * 0.35)) * -1;
+        background: #252827;
+        border-radius: 50%;
+        height: 11px;
+        width: 11px;
+        content: "";
+        top: 5px;
+      }
+    }
+  }
+}

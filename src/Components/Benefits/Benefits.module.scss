@@ -28,11 +28,64 @@
     justify-content: center;
     gap: 40px;
 
+    &__image {
+      width: 400px;
+      align-self: center;
+      justify-self: center;
+    }
+
     &__information-item {
+      justify-self: end;
       display: flex;
       flex-flow: column nowrap;
       gap: 50px;
       font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .benefits-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30%;
+  }
+
+  .benefits-block {
+    & h3 {
+      font-size: 1rem;
+    }
+
+    &__data {
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0px;
+
+      &__image {
+        order: -2;
+        width: 40vw;
+      }
+
+      &__information-item {
+        padding-left: 20%;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0px;
+        font-size: 0.7rem;
+
+        &:first-child {
+          margin-top: 20px;
+        }
+
+        & span {
+          display: list-item;
+          list-style-type: disc;
+        }
+      }
     }
   }
 }

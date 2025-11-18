@@ -14,10 +14,10 @@ export const Footer = memo(() => {
       </div>
       <div className={styles["footer-block__contacts"]}>
         <a href="tel:+7-988-106-00-43">
-          <MdPhone size={25} />
+          <MdPhone size={30} />
         </a>
         <a href="mailto:Lyahovaanastasya@yandex.ru">
-          <MdMail size={25} />
+          <MdMail size={30} />
         </a>
       </div>
       <div className={styles["footer-block__developer-info"]}>

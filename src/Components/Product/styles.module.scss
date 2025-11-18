@@ -45,8 +45,6 @@
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  // background-image: url("/images/yoshta_background.png");
-  // background-size: cover;
 
   &__image-block {
     position: relative;
@@ -80,5 +78,35 @@
     opacity: 0;
     animation: undertile_animation 0.8s forwards;
     animation-delay: 0.5s;
+  }
+}
+
+@media (max-width: 430px) {
+  .product-information-block {
+    &__image-block {
+      &__image {
+        z-index: 2;
+        width: 500px;
+        transform: scale(0.5);
+      }
+
+      &__splashes {
+        position: absolute;
+        z-index: 1;
+        animation: none;
+        transform: translateY(-200px) scale(0.5);
+      }
+    }
+
+    &__undertile {
+      align-self: center;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      width: 30%;
+      color: white;
+      opacity: 0;
+      animation: undertile_animation 0.8s forwards;
+      animation-delay: 0.5s;
+    }
   }
 }

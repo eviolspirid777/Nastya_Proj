@@ -1,8 +1,6 @@
 .about-block {
   height: 100vh;
   width: 100%;
-  // display: grid;
-  // grid-template-rows: auto 1fr;
   display: flex;
   flex-flow: column nowrap;
   gap: 100px;
@@ -32,6 +30,44 @@
       // font-family: "SouthGhetto";
       font-size: 1.2rem;
       letter-spacing: 1px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .about-block {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10%;
+    background-image: url("/images/yoshta_background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+
+    & h3 {
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    &__information {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
+      & span {
+        width: 80%;
+        align-self: center;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+      }
     }
   }
 }

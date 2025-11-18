@@ -48,12 +48,7 @@ export const Benefits: FC<{
       <div className={styles["benefits-block"]}>
         <h3>Преимущества</h3>
         <div className={styles["benefits-block__data"]}>
-          <div
-            className={styles["benefits-block__data__information-item"]}
-            style={{
-              justifySelf: "end",
-            }}
-          >
+          <div className={styles["benefits-block__data__information-item"]}>
             <span>{renderBlurText("Удобная упаковка")}</span>
             <span>
               {renderBlurText("Уникальность содержащегося компонента")}
@@ -62,11 +57,7 @@ export const Benefits: FC<{
           </div>
           <img
             src="/images/bottle.png"
-            style={{
-              width: "400px",
-              alignSelf: "center",
-              justifySelf: "center",
-            }}
+            className={styles["benefits-block__data__image"]}
           />
           <div className={styles["benefits-block__data__information-item"]}>
             <span>{renderBlurText("Отсутствие сахара")}</span>

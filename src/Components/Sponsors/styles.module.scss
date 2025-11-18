@@ -51,3 +51,63 @@
     }
   }
 }
+
+@media (max-width: 430px) {
+  .sponsors-block {
+    margin-top: 230px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    & h3 {
+      font-size: 1rem;
+    }
+
+    &__cards {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 5vw;
+      align-items: center;
+      justify-content: space-evenly;
+
+      &__card {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 80vw;
+        height: 29vh;
+        gap: 25px;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: 1px 1px 10px gray;
+        border-radius: 10px;
+        padding: 2%;
+
+        & span {
+          width: 80%;
+          text-align: justify;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    &__innovation-fond {
+      margin-top: 20px;
+      width: 80%;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 5vw;
+      align-items: center;
+      justify-content: center;
+
+      & span {
+        color: gray;
+        text-align: justify;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

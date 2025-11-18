@@ -191,3 +191,195 @@ $button-color: #882ba2;
     }
   }
 }
+
+@media (max-width: 430px) {
+  .contacts-block {
+    margin-top: 280px;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    strong {
+      text-align: center;
+      font-weight: 100;
+      width: 300px;
+    }
+
+    &__content {
+      margin-top: 40px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: 5vw;
+
+      &__card {
+        background-color: $background;
+        box-shadow: 5px 5px 10px $box-shadow;
+        width: 80vw;
+        padding: 5%;
+        border-radius: 30px;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px;
+
+        &__telephone {
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+
+        &__email {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        &__address {
+          font-size: 0.8rem;
+          margin-top: 20px;
+          font-weight: 100;
+        }
+
+        &__contacts {
+          margin-top: 10px;
+          display: flex;
+          flex-flow: row nowrap;
+          gap: 8px;
+
+          & a {
+            text-decoration: none;
+            color: black;
+          }
+
+          & > * {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__form {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        & input {
+          background-color: $background;
+          height: auto;
+          width: 90%;
+          border: none;
+          box-shadow: 5px 5px 10px $box-shadow;
+          border-radius: 30px;
+          padding: 10%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        & a {
+          position: relative;
+          margin: auto;
+          width: 100%;
+          max-width: 260px;
+          height: 52px;
+          background: #fff;
+          transform: translate3d(0px, 0%, 0px);
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 0.9rem;
+          letter-spacing: 0.05em;
+          transition-delay: 0.6s;
+          overflow: hidden;
+          box-shadow: 5px 5px 10px $box-shadow;
+          border-radius: 30px;
+          user-select: none;
+          cursor: pointer;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $button-color;
+            border-radius: 50% 50% 0 0;
+            transform: translateY(100%) scaleY(0.5);
+            transition: all 0.6s ease;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 0;
+            transform: translateY(0) scaleY(1);
+            transition: all 0.6s ease;
+          }
+          & div {
+            position: relative;
+            top: 16px;
+            width: 100%;
+            height: 26px;
+            text-transform: uppercase;
+            overflow: hidden;
+            & span {
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              width: 100%;
+              text-align: center;
+              transition: transform 0.5s ease;
+              &:first-child {
+                color: white;
+                transform: translateY(24px);
+              }
+              &:last-child {
+                color: #1e0f21;
+                transform: translateY(0);
+              }
+            }
+          }
+
+          &:hover {
+            background: $button-color;
+            transition: background 0.2s linear;
+            transition-delay: 0.6s;
+            &:after {
+              border-radius: 0 0 50% 50%;
+              transform: translateY(-100%) scaleY(0.5);
+              transition-delay: 0;
+            }
+            &:before {
+              border-radius: 0;
+              transform: translateY(0) scaleY(1);
+              transition-delay: 0;
+            }
+            span {
+              &:first-child {
+                transform: translateY(0);
+              }
+              &:last-child {
+                transform: translateY(-24px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
